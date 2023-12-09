@@ -16,8 +16,13 @@ const randomNumber =  getRandomNumber (100);
 const createMessage = () => {
 
    const userNumber = iptNumber.value;
-  
-  if (userNumber > randomNumber) {
+   iptNumber.max = 100;
+   
+  if (userNumber < 1 || userNumber > 100) {
+   computerMessage.innerHTML = `El número debe estar
+   entre 1 y 100.`;
+  }
+  else if (userNumber > randomNumber) {
 computerMessage.innerHTML = `Demasiado alto`;
    }
    else if (userNumber < randomNumber) {
