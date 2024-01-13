@@ -18,3 +18,8 @@
 .counter {
    color: rgb(244, 80, 80);
 }
+.span-challenge {
+   color: rgb(69, 248, 24);
+   font-size: 1.3rem;
+   text-align: center;
+}

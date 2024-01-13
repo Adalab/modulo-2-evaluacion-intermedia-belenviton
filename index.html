@@ -11,19 +11,24 @@
 <body>
    <header>
       <h1 class="primary-title">Adivina el número</h1>
+      <h2 class="span-challenge">¿Podrás conseguirlo sin
+         llegar a 6 intentos? </h2>
    </header>
 
    <main>
-      <section class="principal-section">
-         <form action="" class="form js__form">
+      <section class="principal-section js__principal_section">
+         <form action="#" class="form js__form">
             <label class="label-number js__label_number" for="number">Introduce aquí tu número</label>
-            <input class="input-number js__input_number" type="number" id="number" name="number" max="100">
-            <input class="play-button js__play_button" type="button" value="Prueba">
+            <input class="input-number js__input_number" type="number" id="number" name="number" max="100"
+               placeholder="Entre 1 y 100" required>
+            <input class=" play-button js__play_button" type="button" value="Prueba">
          </form>
       </section>
       <section>
          <p class="message js__message">Pista: Escribe el número y dale a Prueba</p>
-         <p class="counter js__counter">Número de intentos: 0</p>
+         <p class="counter js__counter"> Número de intentos: 0.
+         </p>
+
       </section>
    </main>
    <script src="./js/main.js"></script>
