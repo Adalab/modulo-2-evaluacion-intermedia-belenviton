@@ -34,19 +34,25 @@ const createMessage = () => {
     printMessage(`Demasiado alto`);
   } else if (userNumber < randomNumber) {
     printMessage(`Demasiado bajo`);
+  } else if (iptNumber.value === '') {
+    printMessage(`Escribe un número`);
   } else {
     printMessage(`¡¡¡Has ganado campeona!!!`);
   }
 };
 
 const numberTest = () => {
-  counterPc.innerHTML = `Número de intentos: ${numberClicks++}.`;
+  if (iptNumber.value === '') {
+    counterPc.innerHTML = `Número de intentos: ${numberClicks - 1}`;
+  } else {
+    counterPc.innerHTML = `Número de intentos: ${numberClicks++}.`;
+  }
 };
 
 const finalPlay = () => {
   if (parseInt(numberClicks) > 6) {
     sectionForm.innerHTML =
-      'El juego ha terminado. ¡Has superado el número de intentos';
+      'El juego ha terminado. ¡Has superado el número de intentos!';
     computerMessage.innerHTML = '';
   }
 };
